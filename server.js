@@ -16,10 +16,8 @@ const port = process.env.PORT || 8000;
 app.use(express.json());
 app.use(cors());
 
-// connection url
 
-
-mongoose_1.default
+mongoose.default
     .connect(process.env.MONGO_DB)
     .then(() => console.log("Connected to database!"));
 // API
