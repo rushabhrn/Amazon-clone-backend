@@ -18,12 +18,10 @@ app.use(cors());
 
 // connection url
 
-const connection_url = process.env.MONGO_DB;
 
-mongoose.connect(connection_url, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose_1.default
+    .connect(process.env.MONGO_DB)
+    .then(() => console.log("Connected to database!"));
 // API
 
 app.get("/", (req, res) => res.status(200).send("Home Page"));
