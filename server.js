@@ -6,7 +6,7 @@ const Products = require("./Products");
 const Users = require("./Users");
 const Orders = require("./Orders");
 const stripe = require("stripe")(
-  "sk_test_51P5PlOSHih1nl5IVeR5x389TzhvGGQaNAzip4n9hdDQFJAkvIhE9KBsqNsY3GTGFRHwqADLJdZbmSK7wuxGUAnNX00e5jqwFuc"
+  "STRIPE_API_KEY"
 );
 
 const app = express();
@@ -19,7 +19,7 @@ app.use(cors());
 // connection url
 
 const connection_url =
-  "mongodb+srv://rushabhnandanwar2002:<db_password>@cluster0.0zmij.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  "MONGO_DB";
 
 mongoose.connect(connection_url, {
   useNewUrlParser: true,
