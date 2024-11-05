@@ -17,9 +17,10 @@ app.use(express.json());
 app.use(cors());
 
 
-mongoose.default
-    .connect(process.env.MONGO_DB)
-    .then(() => console.log("Connected to database!"));
+mongoose.connect(process.env.MONGO_DB)
+  .then(() => console.log("Connected to database!"))
+  .catch((error) => console.error("Database connection error:", error));
+
 // API
 
 app.get("/", (req, res) => res.status(200).send("Home Page"));
