@@ -18,8 +18,7 @@ app.use(cors());
 
 // connection url
 
-const connection_url =
-  "MONGO_DB";
+const connection_url = process.env.MONGO_DB;
 
 mongoose.connect(connection_url, {
   useNewUrlParser: true,
